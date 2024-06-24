@@ -13,7 +13,7 @@ static int ft_hexlenght(int nuber)
     return(lenght);
 }
 
-static int ft_puthex(int nuber)
+static void ft_puthex(int nuber)
 {
 
     if(nuber >= 0 && nuber <= 9)

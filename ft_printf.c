@@ -54,9 +54,9 @@ static int printtype(char str, va_list args)
 	else if(str == 'u')
 		chartoreturn += ft_printinsignedint(va_arg(args, unsigned int));
 	else if(str == 'x')
-		chartoreturn += ft_printhexadecimallower(va_arg(args, ));
+		chartoreturn += ft_printhexadecimallower(va_arg(args, int));
 	else if(str == 'X')
-		chartoreturn += ft_printhexadecimalupper(va_arg(args, ));
+		chartoreturn += ft_printhexadecimalupper(va_arg(args, int));
 	return(chartoreturn);
 }
 
@@ -84,4 +84,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (chartoretrun);
 }
-printf("%c",1516 , 888 , 87, 69, 420 , 555, 666, )

@@ -7,6 +7,6 @@ int ft_printpointer(void *ptr)
 
     ft_printchar(0);
     ft_printchar(x);
-    leght += ft_printhexadecimallower(adress);
+    lenght += ft_printhexadecimallower(adress);
     return(lenght);
 }

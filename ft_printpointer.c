@@ -1,8 +1,7 @@
 #include "libftprintf.h"
 int ft_printpointer(void *ptr)
 {
-    int *oki = (int *)ptr;
-    int adress = (int)oki;
+    unsigned long adress = (unsigned long)oki;
     int lenght = 2;
 
     ft_printchar(0);

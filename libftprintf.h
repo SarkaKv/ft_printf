@@ -17,4 +17,9 @@
 # include <stdarg.h>
 
 int	ft_printf(const char *str, ...);
+int ft_printchar(int c);
+int ft_printhexadecimallower(int number);
+int ft_printhexadecimalupper(int number);
+int ft_printpointer(void *ptr);
+int ft_printunsignedint(unsigned int number);
 #endif

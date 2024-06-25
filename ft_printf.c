@@ -89,3 +89,5 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (chartoretrun);
 }
+//Vymazat () u chartoreturn 
+// po printtype i++

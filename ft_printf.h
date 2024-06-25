@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include "libft/libft.h"
 # include <stdarg.h>
@@ -21,6 +21,6 @@ int	ft_printhexadecimallower(unsigned int number);
 int	ft_printhexadecimalupper(unsigned int number);
 int	ft_printchar(int c);
 int	ft_printstring(char *str);
-int	ft_printinsignedint(unsigned int nuber);
+int	ft_printunsignedint(unsigned int nuber);
 int	ft_printpointer(void *ptr);
 #endif

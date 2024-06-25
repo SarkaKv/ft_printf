@@ -9,7 +9,7 @@ OBJS = $(SRCS:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS) $(HEAD)
-	@cd libft && $(MAKE) bonus
+	@cd libft && $(MAKE)
 	@cp libft/libft.a $(NAME)
 	@ar -rcs $(NAME) $(OBJS)
 	@echo "\033[90m[\033[32mSuccess\033[90m]\033[32m Successfully compiled "libftprintf.a" .\033[0m"

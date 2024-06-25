@@ -45,23 +45,25 @@ static int	ft_printnumber(int number)
 }
 static int	printtype(char str, va_list args)
 {
-	int chartoreturn (= 0);
+	int chartoreturn;
+	
+	chartoreturn = 0;
 	if (str == '%')
-		chartoreturn (+= ft_printchar('%'));
+		chartoreturn += ft_printchar('%');
 	else if (str == 'c')
-		chartoreturn (+= ft_printchar(va_arg(args, int)));
+		chartoreturn += ft_printchar(va_arg(args, int));
 	else if (str == 's')
-		chartoreturn (+= ft_printstring(va_arg(args, char *)));
+		chartoreturn += ft_printstring(va_arg(args, char *));
 	else if (str == 'p')
-		chartoreturn (+= ft_printpointer(va_arg(args, void *)));
+		chartoreturn += ft_printpointer(va_arg(args, void *));
 	else if (str == 'd' || str == 'i')
-		chartoreturn (+= ft_printnumber(va_arg(args, int)));
+		chartoreturn += ft_printnumber(va_arg(args, int));
 	else if (str == 'u')
-		chartoreturn (+= ft_printinsignedint(va_arg(args, unsigned int)));
+		chartoreturn += ft_printunsignedint(va_arg(args, unsigned int));
 	else if (str == 'x')
-		chartoreturn (+= ft_printhexadecimallower(va_arg(args, unsigned int)));
+		chartoreturn += ft_printhexadecimallower(va_arg(args, unsigned int));
 	else if (str == 'X')
-		chartoreturn (+= ft_printhexadecimalupper(va_arg(args, unsigned int)));
+		chartoreturn += ft_printhexadecimalupper(va_arg(args, unsigned int));
 	return (chartoreturn);
 }
 
@@ -79,6 +81,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			chartoretrun += printtype((char)str[i++], args);
+			i++;
 		}
 		else
 		{
@@ -89,5 +92,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (chartoretrun);
 }
-//Vymazat () u chartoreturn 
-// po printtype i++

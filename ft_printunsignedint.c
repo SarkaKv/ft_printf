@@ -1,5 +1,17 @@
 #include "ft_printf.h"
 
+static int ft_strleni(const char *str)
+{
+	size_t	ok;
+
+	ok = 0;
+	while (str[ok] != '\0')
+	{
+		ok++;
+	}
+	return (ok);
+}
+
 static int ft_printstring(char *str)
 {
 	if(!str)
@@ -53,7 +65,7 @@ static char	*my_second_itoa(unsigned int n)
 int ft_printunsignedint(unsigned int number)
 {
     char *ptr = my_second_itoa(number);
-    int mylenght = ft_strlen(ptr);
+    int mylenght = ft_strleni(ptr);
     ft_printstring(ptr);
     free(ptr);
     return(mylenght);

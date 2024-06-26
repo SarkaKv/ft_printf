@@ -23,7 +23,10 @@ int	ft_printstring(char *str)
 	int	counting;
 
 	if (!str)
-		return (0);
+	{
+		write(1, "(null)", 6);
+		return(6);
+	}
 	counting = 0;
 	while (str[counting] != '\0')
 	{
@@ -80,8 +83,8 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			chartoretrun += printtype((char)str[i++], args);
 			i++;
+			chartoretrun += printtype((char)str[i], args);
 		}
 		else
 		{

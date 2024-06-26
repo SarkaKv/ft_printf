@@ -2,7 +2,7 @@
 
 static int ft_strleni(const char *str)
 {
-	size_t	ok;
+	int	ok;
 
 	ok = 0;
 	while (str[ok] != '\0')

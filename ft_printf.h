@@ -23,4 +23,5 @@ int	ft_printchar(int c);
 int	ft_printstring(char *str);
 int	ft_printunsignedint(unsigned int nuber);
 int	ft_printpointer(void *ptr);
+int ft_strleni(char *str);
 #endif

@@ -1,13 +1,5 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int ft_printunsignedint(unsigned int number)
-{
-    char *ptr = my_second_itoa(number);
-    int mylenght = ft_strlen(ptr);
-    ft_printstring(ptr);
-    free(ptr);
-    return(mylenght);
-}
 static int ft_printstring(char *str)
 {
 	if(!str)
@@ -25,7 +17,7 @@ static int	getlenghtofn(unsigned int ok)
 	unsigned int	lenghtofthenb;
 
 	lenghtofthenb = 0;
-	if (ok <= 0)
+	if (ok == 0)
 	{
 		lenghtofthenb++;
 	}
@@ -49,11 +41,6 @@ static char	*my_second_itoa(unsigned int n)
 	if (!thenumber)
 		return (NULL);
 	thenumber[lenghtofthenb] = '\0';
-	if (n < 0)
-	{
-		thenumber[0] = '-';
-		tempn = -tempn;
-	}
 	if (n == 0)
 		thenumber[0] = '0';
 	while (tempn > 0)
@@ -62,4 +49,12 @@ static char	*my_second_itoa(unsigned int n)
 		tempn = tempn / 10;
 	}
 	return (thenumber);
+}
+int ft_printunsignedint(unsigned int number)
+{
+    char *ptr = my_second_itoa(number);
+    int mylenght = ft_strlen(ptr);
+    ft_printstring(ptr);
+    free(ptr);
+    return(mylenght);
 }

@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-static int ft_strleni(const char *str)
+int ft_strleni(const char *str)
 {
 	int	ok;
 

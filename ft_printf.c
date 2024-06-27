@@ -41,7 +41,7 @@ static int	ft_printnumber(int number)
 	int		howlong;
 
 	str = ft_itoa(number);
-	howlong = ft_strlen(str);
+	howlong = ft_strleni(str);
 	ft_printstring(str);
 	free(str);
 	return (howlong);

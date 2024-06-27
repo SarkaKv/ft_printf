@@ -1,35 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printunsignedint.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skvackov <skvackov@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/20 15:55:25 by skvackov          #+#    #+#             */
+/*   Updated: 2024/06/27 10:18:38 by skvackov         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_strleni(const char *str)
-{
-	int	ok;
-
-	ok = 0;
-	while (str[ok] != '\0')
-	{
-		ok++;
-	}
-	return (ok);
-}
-
-static int ft_printstring(char *str)
-{
-	if(!str)
-		return(0);
-	int counting = 0;
-	while(str[counting] != '\0')
-	{
-		write(1, &str[counting], 1);
-		counting ++;
-	}
-	return(counting);
-}
-static int	getlenghtofn(unsigned int ok)
+static unsigned int	getlenghtofn(unsigned int ok)
 {
 	unsigned int	lenghtofthenb;
 
 	lenghtofthenb = 0;
-	if (ok == 0)
+	if (ok <= 0)
 	{
 		lenghtofthenb++;
 	}
@@ -41,7 +29,7 @@ static int	getlenghtofn(unsigned int ok)
 	return (lenghtofthenb);
 }
 
-static char	*my_second_itoa(unsigned int n)
+static char	*ft_second_itoa(unsigned int n)
 {
 	char			*thenumber;
 	size_t			lenghtofthenb;
@@ -62,11 +50,15 @@ static char	*my_second_itoa(unsigned int n)
 	}
 	return (thenumber);
 }
-int ft_printunsignedint(unsigned int number)
+
+int	ft_printunsignedint(unsigned int nuber)
 {
-    char *ptr = my_second_itoa(number);
-    int mylenght = ft_strleni(ptr);
-    ft_printstring(ptr);
-    free(ptr);
-    return(mylenght);
+	char	*ptr;
+	int		getlenght;
+
+	ptr = ft_second_itoa(nuber);
+	getlenght = ft_strlen(ptr);
+	ft_printstring(ptr);
+	free(ptr);
+	return (getlenght);
 }

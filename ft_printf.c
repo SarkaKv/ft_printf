@@ -6,7 +6,7 @@
 /*   By: skvackov <skvackov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:10:27 by skvackov          #+#    #+#             */
-/*   Updated: 2024/06/24 16:27:24 by skvackov         ###   ########.fr       */
+/*   Updated: 2024/06/27 10:23:10 by skvackov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,17 @@ int	ft_printchar(int c)
 	write(1, &c, 1);
 	return (1);
 }
+
 int	ft_printstring(char *str)
 {
 	int	counting;
 
+	counting = 0;
 	if (!str)
 	{
 		write(1, "(null)", 6);
-		return(6);
+		return (6);
 	}
-	counting = 0;
 	while (str[counting] != '\0')
 	{
 		write(1, &str[counting], 1);
@@ -35,21 +36,23 @@ int	ft_printstring(char *str)
 	}
 	return (counting);
 }
+
 static int	ft_printnumber(int number)
 {
 	char	*str;
 	int		howlong;
 
 	str = ft_itoa(number);
-	howlong = ft_strleni(str);
+	howlong = ft_strlen(str);
 	ft_printstring(str);
 	free(str);
 	return (howlong);
 }
-static int	printtype(char str, va_list args)
+
+static int	printtype(const char str, va_list args)
 {
-	int chartoreturn;
-	
+	int	chartoreturn;
+
 	chartoreturn = 0;
 	if (str == '%')
 		chartoreturn += ft_printchar('%');

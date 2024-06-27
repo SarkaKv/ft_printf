@@ -6,7 +6,7 @@
 /*   By: skvackov <skvackov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 15:55:20 by skvackov          #+#    #+#             */
-/*   Updated: 2024/06/24 16:24:43 by skvackov         ###   ########.fr       */
+/*   Updated: 2024/06/25 11:00:16 by skvackov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_hexlenght(unsigned int nuber)
 
 static void	ft_puthex(unsigned int nuber)
 {
-	if (nuber >= 0 && nuber <= 9)
+	if (nuber <= 9)
 		ft_printchar(nuber + '0');
 	else if (nuber >= 10 && nuber <= 15)
 		ft_printchar(nuber - 10 + 'A');

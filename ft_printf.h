@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skvackov <skvackov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 13:59:54 by skvackov          #+#    #+#             */
-/*   Updated: 2024/06/24 16:28:58 by skvackov         ###   ########.fr       */
+/*   Updated: 2024/06/25 11:06:35 by skvackov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,4 @@ int	ft_printchar(int c);
 int	ft_printstring(char *str);
 int	ft_printunsignedint(unsigned int nuber);
 int	ft_printpointer(void *ptr);
-int  ft_strleni(const char *str);
 #endif
